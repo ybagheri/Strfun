@@ -26,11 +26,16 @@ class StrfunTest extends PHPUnit_Framework_TestCase
     public function testStrfunFaToEnNumber()
     {
         $faText = '۰۱۲۳۴۵۶۷۸۹';
-        $enTest = '0123456789';
+        $enText = '0123456789';
+        $mixedText =  '۰۱۲۳456۷۸۹';
 
-        $this->assertEquals(Strfun::faToEnNumber($faText), $enTest);
+        $this->assertEquals(Strfun::faToEnNumber($faText), $enText);
 
-        $this->assertEquals(Strfun::EnTofaNumber($enTest), $faText);
+        $this->assertEquals(Strfun::EnTofaNumber($enText), $faText);
+      
+       $this->assertEquals(Strfun::faToEnNumber($mixedText), $enText);
+
+        $this->assertEquals(Strfun::EnTofaNumber($mixedText), $faText);
 
 
     }

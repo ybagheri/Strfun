@@ -1,10 +1,10 @@
 {
     "name": "ybagheri/strfun",
-    "description": "This is a handy little function to strip out a string between two specified pieces of text. This could be used to parse XML text, bbCode, or any other delimited code/text for that matter. based on justin-cook",    
+    "description": "This is a handy little function to strip out a string between two specified pieces of text. This could be used to parse XML text, bbCode, or any other delimited code/text for that matter. based on justin-cook\n convert Persian/Arabic numbers to English numbers and vice versa",    
     "license": "MIT",
     "minimum-stability" : "dev",
     "prefer-stable" : true,
-    "keywords": ["string","between"],
+    "keywords": ["string","between","Persian","Arabic","Farsi","numbers","English","convert","utf-8","ascii","ISO-8859-1","converting","character"],
     "authors": [
         {
             "name": "Yousef Bagheri",
@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-        "php": ">5.2"
+        "php": ">=5.6"
         },
     "require-dev": {
         "phpunit/phpunit": "5.5.*"

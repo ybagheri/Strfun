@@ -11,7 +11,7 @@ composer require ybagheri/strfun dev-master
 ```php
 require "vendor/autoload.php";
 use Ybagheri\Strfun;
-$strfun = new Strfun;
+
 $fullstring = 'this is my [tag]dog[/tag]';
 
 $beforeTag = 'this is my ';
@@ -21,7 +21,16 @@ $betweenTag = 'dog';
 $startTag='[tag]';
 $endTag='[/tag]';
 
-echo $strfun->getStringBetween($fullstring, $startTag, $endTag).'</br>'; //dog
-echo $strfun->getStringBefore($fullstring, $startTag, $endTag).'</br>'; //this is my
-echo $strfun->getStringAfter($fullstring, $startTag, $endTag).'</br>'; //dog[/tag]
+echo Strfun::getStringBetween($fullstring, $startTag, $endTag).'</br>'; //dog
+echo Strfun::getStringBefore($fullstring, $startTag, $endTag).'</br>'; //this is my
+echo Strfun::getStringAfter($fullstring, $startTag, $endTag).'</br>'; //dog[/tag]
+//----------------------------------
+
+$mixedText =  '۰۱۲۳456۷۸۹';
+echo Strfun::faToEnNumber($mixedText); //'0123456789'
+echo PHP_EOL;
+echo Strfun::EnTofaNumber($mixedText); //'۰۱۲۳۴۵۶۷۸۹'
+
+
+
 ```
